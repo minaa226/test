@@ -1,0 +1,286 @@
+body{
+    margin: 0;
+    padding: 0;
+
+
+}
+
+nav{
+    background-color: bisque;
+    padding: 10px 20px;
+
+
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  
+}
+nav ul li{
+    margin-right: 20px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: aquamarine;
+    font-size: 8px 16px;
+    display: block;
+    transition: backroup-color 0.3ms;
+
+}
+nav ui li a:hover{
+    background-color: blueviolet;
+    border-radius: 10px; 
+}
+nav ul li a.active{
+    background-color: rgb(255, 180, 82);
+    border-radius: 10px;
+}
+
+.content{
+    background-color: #afded8;
+    text-align: center;
+}
+
+.content img{
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.services{
+    text-align: center;
+}
+
+.services h2{
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.services ul{
+    list-style: nine;
+    padding: 0;
+}
+
+.services ul il{
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-top: 60px;
+    background: url(https://ya.ru/images/search?pos=9&from=tabbar&img_url=https%3A%2F%2Fsun9-48.userapi.com%2FwsQIN774MVxtkYFijUhKQo7s0DvCNS1kATDEow%2Fl3MeB-feMoA.jpg&text=%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%B8&rpt=simage&lr=10309)
+}
+nav {
+    background-color: #333;
+    padding:10px 20px;
+    display:flex;
+    position:fixed;
+    align-items:center;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none; /*Убирает маркеры*/
+    margin: 0 auto;
+    padding: 0;
+    display: flex; /*выравнивает элементы в строку*/
+}
+
+nav ul li {
+    margin-right: 20px; /*Отступы между элементами*/
+}
+
+nav ul li a {
+    text-decoration: none; /*Убирает подчеркивание*/
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+    display: block;
+    transition: background-color 0.3ms;
+}
+
+nav ul li a:hover {
+    background-color: #b91111;
+    border-radius: 10px;
+}
+
+nav ul li a.active {
+    background-color: #b91111;
+    border-radius: 10px;
+}
+
+/*стиль для контента*/
+.content {
+    text-align: center;
+
+}
+
+.content img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.services {
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.services ul li:before {
+    content: "✔️";
+    margin-right: 10px;
+    color: green;
+}
+
+.card-container {
+    display: flex; /*flexbox для выравнивания*/
+    flex-wrap: wrap; /*чтобы карточка переходила на новую строку если не помещается в блок*/
+    justify-content: center; /*центрирование контента карточек*/
+    gap: 20px; /*отсупы между карточками*/
+
+}
+
+.card {
+    background-color: rgba(253, 253, 253, 0.76);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s; /*При наведении что то приосходить*/
+}
+
+.card:hover {
+    transform: scale(1.05); /*легкое увеличение карточки при наведении*/
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+
+/*Слайдер*/
+.photo-slider {
+    display: flex;
+    overflow-x: scroll; /*горизонтальная прокрутка*/
+    scroll-snap-type: x mandatory; /*фиксация на слайдере*/
+    gap: 10px; /*отступы между слайдерами*/
+    width: 100%;
+    height: 300px; /* задать высоту больше */
+    scroll-behavior: smooth; /*плавная прокрутка скрола*/
+}
+
+
+.slide img {
+    border-radius: 20px;
+    height: 100%; /* максимум высоту аааааа */
+    object-fit: cover; /* чтобы не было накладки ааааа */
+}
+
+
+/*убираем стандартную прокрутку*/
+.photo-slider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.photo-slider::-webkit-scrollbar{
+    display: none;
+}
+
+
+/*стикеры*/
+.sticker-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.sticker{
+    width: 100%;
+    height: auto;
+    transition: transform 1s; /*плавная анимация прокрутки*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /*при наведении показывает пальчик*/
+}
+
+.sticker img {
+    width: 100%;
+    height: auto;
+    border-radius: 40%;
+    box-shadow: 0 4px 8px rgb(12, 12, 0);
+}
+
+/*эффект прокрутки при наведении*/
+.sticker:hover{
+    transform: rotate(360deg);
+}
+
+
+
+
+
+
+/*footer style*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; 
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
